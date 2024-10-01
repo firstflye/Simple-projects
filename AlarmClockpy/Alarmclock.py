@@ -5,7 +5,7 @@ import pygame
 
 def set_alarm(alarm_time):
     print(f"Alarm set for {alarm_time}")
-    sound_file = "C:/Users/AMOS KIPCHIRCHIR/Desktop/vs code/py stuff/Dates and times/slsp.m4a"
+    sound_file = ""#Add a sound file
     is_running = True
 
     while is_running:
