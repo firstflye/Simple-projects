@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Management</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1>Task Board</h1>
+      </header>
+      <main class="project">
+        <section class="project-tasks">
+          <div class="project-column" id="todo-column">
+            <div class="project-column-heading">
+              <h2 class="project-column-heading__title">To Do</h2>
+              <button class="add-task" onclick="addTask('todo-column')">
+                + Add Task
+              </button>
+            </div>
+            <div class="tasks" id="todo-tasks">
+              <!-- Placeholder Tasks -->
+              <div class="task" draggable="true" tabindex="0">
+                <h3>Task 1</h3>
+                <p>Design the homepage layout</p>
+                <div class="task__tags">
+                  <span class="task__tag task__tag--design">Design</span>
+                </div>
+                <div class="task__actions">
+                  <button class="edit-task" onclick="editTask(this)">
+                    Edit
+                  </button>
+                  <button class="delete-task" onclick="deleteTask(this)">
+                    Delete
+                  </button>
+                </div>
+              </div>
+              <div class="task" draggable="true" tabindex="0">
+                <h3>Task 2</h3>
+                <p>Create illustrations for blog</p>
+                <div class="task__tags">
+                  <span class="task__tag task__tag--illustration"
+                    >Illustration</span
+                  >
+                </div>
+                <div class="task__actions">
+                  <button class="edit-task" onclick="editTask(this)">
+                    Edit
+                  </button>
+                  <button class="delete-task" onclick="deleteTask(this)">
+                    Delete
+                  </button>
+                </div>
+              </div>
+              <div class="task" draggable="true" tabindex="0">
+                <h3>Task 5</h3>
+                <p>Prepare project proposal</p>
+                <div class="task__tags">
+                  <span class="task__tag task__tag--copyright">Copyright</span>
+                </div>
+                <div class="task__actions">
+                  <button class="edit-task" onclick="editTask(this)">
+                    Edit
+                  </button>
+                  <button class="delete-task" onclick="deleteTask(this)">
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-column" id="inprogress-column">
+            <div class="project-column-heading">
+              <h2 class="project-column-heading__title">In Progress</h2>
+              <button class="add-task" onclick="addTask('inprogress-column')">
+                + Add Task
+              </button>
+            </div>
+            <div class="tasks" id="inprogress-tasks">
+              <!-- Placeholder Tasks -->
+              <div class="task" draggable="true" tabindex="0">
+                <h3>Task 3</h3>
+                <p>Write copyright content</p>
+                <div class="task__tags">
+                  <span class="task__tag task__tag--copyright">Copyright</span>
+                </div>
+                <div class="task__actions">
+                  <button class="edit-task" onclick="editTask(this)">
+                    Edit
+                  </button>
+                  <button class="delete-task" onclick="deleteTask(this)">
+                    Delete
+                  </button>
+                </div>
+              </div>
+              <div class="task" draggable="true" tabindex="0">
+                <h3>Task 6</h3>
+                <p>Develop mobile responsiveness</p>
+                <div class="task__tags">
+                  <span class="task__tag task__tag--design">Design</span>
+                </div>
+                <div class="task__actions">
+                  <button class="edit-task" onclick="editTask(this)">
+                    Edit
+                  </button>
+                  <button class="delete-task" onclick="deleteTask(this)">
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-column" id="review-column">
+            <div class="project-column-heading">
+              <h2 class="project-column-heading__title">Review</h2>
+              <button class="add-task" onclick="addTask('review-column')">
+                + Add Task
+              </button>
+            </div>
+            <div class="tasks" id="review-tasks">
+              <!-- Placeholder Tasks -->
+              <div class="task" draggable="true" tabindex="0">
+                <h3>Task 7</h3>
+                <p>Review design wireframes</p>
+                <div class="task__tags">
+                  <span class="task__tag task__tag--design">Design</span>
+                </div>
+                <div class="task__actions">
+                  <button class="edit-task" onclick="editTask(this)">
+                    Edit
+                  </button>
+                  <button class="delete-task" onclick="deleteTask(this)">
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-column" id="done-column">
+            <div class="project-column-heading">
+              <h2 class="project-column-heading__title">Done</h2>
+              <button class="add-task" onclick="addTask('done-column')">
+                + Add Task
+              </button>
+            </div>
+            <div class="tasks" id="done-tasks">
+              <!-- Placeholder Tasks -->
+              <div class="task" draggable="true" tabindex="0">
+                <h3>Task 4</h3>
+                <p>Finalize logo design</p>
+                <div class="task__tags">
+                  <span class="task__tag task__tag--design">Design</span>
+                </div>
+                <div class="task__actions">
+                  <button class="edit-task" onclick="editTask(this)">
+                    Edit
+                  </button>
+                  <button class="delete-task" onclick="deleteTask(this)">
+                    Delete
+                  </button>
+                </div>
+              </div>
+              <div class="task" draggable="true" tabindex="0">
+                <h3>Task 8</h3>
+                <p>Test user feedback implementation</p>
+                <div class="task__tags">
+                  <span class="task__tag task__tag--illustration"
+                    >Illustration</span
+                  >
+                </div>
+                <div class="task__actions">
+                  <button class="edit-task" onclick="editTask(this)">
+                    Edit
+                  </button>
+                  <button class="delete-task" onclick="deleteTask(this)">
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

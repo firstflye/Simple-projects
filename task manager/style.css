@@ -1,0 +1,162 @@
+:root {
+  --bg: #ebf0f7;
+  --header: #fbf4f6;
+  --text: #2e2e2f;
+  --white: #ffffff;
+  --light-grey: #c4cad3;
+  --purple: #7784ee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: var(--text);
+}
+
+.app {
+  background-color: var(--bg);
+  width: 100%;
+  min-height: 100vh;
+}
+
+header {
+  background-color: var(--header);
+  padding: 1rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+.project {
+  padding: 2rem;
+  max-width: 100%;
+  width: 100%;
+  display: inline-block;
+}
+.project-tasks {
+  display: flex;  /* Aligns columns horizontally */
+  gap: 1rem;
+}
+
+.project-column {
+  display: flex;
+  flex-direction: column;  /* Aligns tasks vertically within each column */
+  gap: 1rem;
+  width: 100%;  /* Ensures columns expand and fill space */
+  flex: 1;
+}
+
+.project-column-heading {
+  background-color: var(--header);
+  padding: 1rem;
+}
+
+.project-column-heading__title {
+  font-size: 20px;
+}
+
+.add-task {
+  padding: 8px 16px;
+  background-color: var(--purple);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Tasks container */
+.tasks {
+  display: flex;
+  flex-direction: column;  /* Tasks stacked vertically in each column */
+  gap: 1rem;
+}
+
+.task {
+  cursor: move;
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+  margin-bottom: 1rem;
+  border: 3px dashed transparent;
+}
+
+.task:hover {
+  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+  border-color: rgba(162, 179, 207, .2)!important;
+}
+
+.task__tags {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.task__tag {
+  padding: 0.2rem 0.6rem;
+  border-radius: 50px;
+  font-size: 12px;
+}
+
+.task__tag--design {
+  background-color: var(--tag-3);
+  color: var(--tag-3-text);
+}
+
+.task__tag--illustration {
+  background-color: var(--tag-2);
+  color: var(--tag-2-text);
+}
+
+.task__tag--copyright {
+  background-color: var(--tag-4);
+  color: var(--tag-4-text);
+}
+
+.project-column {
+  min-height: 100px;
+}
+
+.project-column:target {
+  border: 2px dashed var(--purple);
+}
+
+.project-column.drag-over {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+.task__actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 5px;
+}
+
+.task__actions button {
+  padding: 5px 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.task__actions button.edit-task {
+  background-color: #4caf50;
+}
+
+.task__actions button.delete-task {
+  background-color: #f44336;
+}
+
+.task__actions button:hover {
+  opacity: 0.8;
+}
+
